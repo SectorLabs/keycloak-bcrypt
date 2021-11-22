@@ -1,3 +1,5 @@
+We noticed that our imported passwords were using bcrypt without a null terminator (the password is trimmed after 71 characters).
+
 # Keycloak BCrypt
 
 Add a password hash provider to handle BCrypt passwords inside Keycloak.

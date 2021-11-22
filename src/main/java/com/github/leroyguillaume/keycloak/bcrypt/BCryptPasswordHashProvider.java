@@ -44,7 +44,7 @@ public class BCryptPasswordHashProvider implements PasswordHashProvider {
         } else {
             cost = iterations;
         }
-        return BCrypt.with(BCrypt.Version.VERSION_2Y).hashToString(cost, rawPassword.toCharArray());
+        return BCrypt.with(BCrypt.Version.VERSION_2Y_NO_NULL_TERMINATOR).hashToString(cost, rawPassword.toCharArray());
     }
 
     @Override
